@@ -1,9 +1,19 @@
 /* =========================================================================
    1. MAIN CORES & LAYOUT STRUCTURES
    ========================================================================= */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;450;500;550;600;650;700;750;800&display=swap');
+
+html, body, main, header, footer, section, div, h1, h2, h3, h4, h5, h6, p, a, span,
+button, .btn, input, select, textarea, option {
+    font-family: "Nunito", sans-serif;
+
+/* =========================================================================
+   1. MAIN CORES & LAYOUT STRUCTURES
+   ========================================================================= */
 #header {
-    height: 70px;
-    width: 100%;
+    height: 10vh;
+    min-height: 64px;
+    width: 100vw;
     position: sticky;
     top: 0;
     z-index: 10000;
@@ -12,54 +22,54 @@
     align-items: center;
     background-color: #ffffff;
     border-bottom: 1px solid #e8edf2;
-    box-shadow: 0 2px 16px rgba(26, 26, 46, 0.06);
-    padding: 0 2rem;
-    box-sizing: border-box;
+    box-shadow: 0 2px 16px rgba(26, 26, 46, 0.07);
+    padding: 0 2rem 0 0.6rem;
     transition: box-shadow 0.3s ease;
 }
 
-#header *, #header *::before, #header *::after {
-    box-sizing: border-box;
-    font-family: "Nunito", sans-serif;
-}
-
+/* ---- Logo ---- */
 #header #logo {
     height: 100%;
+    min-width:min-content;
     display: flex;
     align-items: center;
+    padding: 0.3rem 0.4rem;
     text-decoration: none;
-    gap: 0.75rem;
+    gap: 0.6rem;
 }
 
 #header #logo img {
-    height: 42px;
+    height: 80%;
     width: auto;
     object-fit: contain;
 }
 
 #header #logo .logo-name {
+    height: 100%;
+    width: auto;
     display: flex;
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
-    line-height: 1.1;
+    line-height: 1;
+    margin-left: -.6rem;
 }
 
 #header #logo .logo-name h3 {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     font-weight: 650;
-    color: var(--dark-neutral, #0f0f1a);
-    letter-spacing: 0.5px;
-    margin: 0;
+    color: #1a1a2e;
+    letter-spacing: 1px;
 }
 
 #header #logo .logo-name h5 {
-    font-size: 0.68rem;
+    font-size: 0.65rem;
     font-weight: 500;
-    color: var(--brand-primary, #0f6e56);
-    letter-spacing: 0.5px;
-    margin: 0;
+    color: #0f6e56;
+    letter-spacing: 0.3px;
+    line-height: 1.3;
 }
+
 
 /* =========================================================================
    2. DESKTOP TEXT-CAPSULE MENU MODULE
@@ -67,12 +77,12 @@
 #header .menu-container #menu {
     height: fit-content;
     width: fit-content;
-    background-color: var(--brand-light-bg, #f3faf7);
-    border: 1.5px solid var(--brand-border-tint, #d4ede5);
+    background-color: #f3faf7;
+    border: 1.5px solid #d4ede5;
     display: flex;
-    padding: 0.35rem 0.5rem;
-    border-radius: 14px;
-    gap: 4px;
+    padding: 0.4rem 0.6rem;
+    border-radius: 12px;
+    gap: 2px;
     align-items: center;
 }
 
@@ -81,29 +91,34 @@
     display: inline-block;
 }
 
+#header #menu a .btn,
 #header #menu .btn {
     background: none;
     border: none;
-    font-size: 0.9rem;
-    font-weight: 500;
+    font-size: 0.85rem;
+    font-weight: 450;
     cursor: pointer;
-    color: var(--muted-text, #5c5c7a);
-    padding: 0.5rem 1rem;
+    color: #4a4a6a;
+    padding: 0.5rem 0.85rem;
     border-radius: 10px;
-    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-    letter-spacing: -0.01em;
+    transition: all 0.23s ease;
+    letter-spacing: 0.3px;
     white-space: nowrap;
+    font-family: "Nunito", sans-serif;
 }
 
+#header #menu a .btn:hover,
 #header #menu .btn:hover {
-    background-color: var(--background, #a9e3d0);
-    color: var(--dark-neutral, #0f0f1a);
+    background-color: #a9e3d0;
+    color: #1a1a2e;
 }
 
+#header #menu a .btn.active,
 #header #menu .btn.active {
-    background-color: var(--brand-primary, #0f6e56);
+    background-color: #0f6e56;
     color: #ffffff;
 }
+
 
 /* =========================================================================
    3. ACCOUNT WRAPPER & DROPDOWN COMPONENT ENGINES
@@ -117,7 +132,7 @@
     background: transparent;
     border: none;
     padding: 0;
-    margin-left: 0.5rem;
+    margin-left: 0.4rem;
 }
 
 #header #menu .nav-login-btn {
@@ -125,22 +140,24 @@
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    padding: 0.45rem 0.9rem;
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: var(--brand-primary, #0f6e56); 
+    padding: 0.5rem 0.9rem;
+    font-size: 0.88rem;
+    font-weight: 450;
+    font-family: 'Nunito', sans-serif;
+    color: #0f6e56; 
     background: transparent;
-    border: 1.5px solid var(--brand-primary, #0f6e56); 
+    border: 1.5px solid #0f6e56; 
     border-radius: 10px; 
     cursor: pointer;
     white-space: nowrap;
-    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: all 0.25s ease;
 }
 
 #header #menu .nav-login-btn:hover {
-    background: var(--brand-primary, #0f6e56);
+    background: #0f6e56;
     color: #ffffff;
 }
+
 
 /* =========================================================================
    4. COMPACT MOBILE VIEW BREAKPOINT OPERATIONS
@@ -154,74 +171,90 @@
 }
 
 @media (max-width: 1024px) {
-    #header {
-        padding: 0 1.5rem;
+    #header #logo .logo-name {
+        margin-left: -0.5rem;
+    }
+
+    #header #logo img {
+        margin-right: -0.9rem;
     }
 
     #header .menu-container #menu {
         display: none;
     }
 
+    /* ---- FIXED COLORED CONTAINER BUBBLE ---- */
     #header #mobileMenuBtn {
         display: flex;
         align-items: center;
         justify-content: center;
+        position: absolute;
+        top: 50%;
+        right: 1.5rem;
+        transform: translateY(-50%);
         width: 42px;
         height: 42px;
+        margin: 0;
         cursor: pointer;
         z-index: 10002;
-        background-color: var(--brand-primary, #0f6e56); 
+        background-color: #0f6e56; 
         border-radius: 50%;
-        border: 1.5px solid var(--brand-border-tint, #d4ede5);
-        transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease;
+        border: 1.5px solid #d4ede5;
+        transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease;
     }
 
+    /* ---- HARDWARE DRIVEN SVG INLINE IMAGES ---- */
     #header #mobileMenuBtn .mobile-icon-asset {
-        width: 20px;
-        height: 20px;
+        width: 22px;
+        height: 22px;
         object-fit: contain;
         pointer-events: none;
         filter: brightness(0) invert(1);
         transition: transform 0.25s ease, opacity 0.2s ease;
     }
 
+    /* Rendering Layer Toggle Logic States */
     #header #mobileMenuBtn .menu-icon { display: block; }
     #header #mobileMenuBtn .close-icon { display: none; }
 
+    /* Custom active menu button state toggled with your preferred green palette color */
     #header #mobileMenuBtn.is-open {
-        transform: rotate(90deg); 
-        background-color: var(--dark-neutral, #0f0f1a);
+        background-color: #0f6e56; 
         border-color: rgba(255, 255, 255, 0.1);
+        transform: translateY(-50%) rotate(90deg); 
     }
 
     #header #mobileMenuBtn.is-open .menu-icon { display: none; }
     #header #mobileMenuBtn.is-open .close-icon { display: block; }
 
+    /* ---- FROST GLASSMORPHIC SLIDING PANEL ---- */
     #header .mobile-drawer-wrapper {
         display: flex; 
         flex-direction: column;
         align-items: center;
         gap: 1.2rem;
         position: absolute;
-        top: 80px; 
-        right: 1.5rem;        
+        top: 100%; 
+        right: 1.5rem;       
+        left: auto;        
         width: 290px;      
-        border-radius: 24px; 
-        padding: 2rem 1.5rem;
+        border-radius: 20px; 
+        padding: 2.5rem 1.5rem;
         z-index: 10001;
+        box-sizing: border-box;
 
-        background: var(--glass-background, rgba(169, 227, 208, 0.85));
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        box-shadow: 0 20px 40px rgba(15, 15, 26, 0.08);
+        background: var(--glass-background, rgba(169, 227, 208, 0.75));
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        box-shadow: 0 15px 30px rgba(26, 26, 46, 0.06);
         
         opacity: 0;
         visibility: hidden;
-        transform: translateY(-15px);
-        transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1),
-                    transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
-                    visibility 0.3s;
+        transform: translateY(-20px);
+        transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                    transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                    visibility 0.35s;
     }
 
     #header .mobile-drawer-wrapper.is-open {
@@ -231,11 +264,12 @@
     }
     
     #header .mobile-drawer-wrapper .mobile-link {
+        font-family: "Nunito", sans-serif;
         font-size: 1.1rem;
-        font-weight: 500;
-        color: var(--dark-neutral, #0f0f1a);
+        font-weight: 450;
+        color: var(--dark-neutral, #1a1a2e);
         text-decoration: none;
-        padding: 0.5rem 0;
+        padding: 0.4rem 0;
         text-align: center;
         width: 100%;
         transition: color 0.2s ease, transform 0.2s ease;
@@ -243,26 +277,31 @@
 
     #header .mobile-drawer-wrapper .mobile-link.active,
     #header .mobile-drawer-wrapper .mobile-link:hover {
-        color: var(--brand-primary, #0f6e56);
-        transform: scale(1.02);
-    }
-
-    #header .mobile-drawer-wrapper .nav-login-btn {
-        width: 100%;
-        text-align: center;
-        padding: 0.75rem;
-        background-color: var(--dark-neutral, #0f0f1a);
         color: #ffffff;
-        text-decoration: none;
-        border-radius: 12px;
-        font-weight: 500;
-        box-shadow: 0 4px 12px rgba(15, 15, 26, 0.1);
+        transform: scale(1.04);
     }
 
-    #header .mobile-drawer-wrapper .menu-divider {
+    #header .mobile-drawer-wrapper .mobile-profile-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75rem;
+        padding-bottom: 0.5rem;
         width: 100%;
-        height: 1px;
-        background-color: rgba(15, 15, 26, 0.08);
-        margin: 0.2rem 0;
+    }
+}
+
+
+/* =========================================================================
+   5. NATIVE CORE ANIMATION LAYERS
+   ========================================================================= */
+@keyframes navDropdownFade {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

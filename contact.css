@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;450;500;550;600;650;700;750;800&display=swap');
+
+html, body, main, header, footer, section, div, h1, h2, h3, h4, h5, h6, p, a, span,
+button, .btn, input, select, textarea, option {
+    font-family: "Nunito", sans-serif;
+}
+
 .contact-section {
     background: linear-gradient(to bottom, #e3f6fc 0%, #f6f9fb 40%, #f3faf7 70%, #c3f8e8 100%);
     padding: 7rem 2rem 9rem;
