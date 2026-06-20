@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MentorHub — Connect, Learn, and Grow</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="loader.css">
+    <link rel="stylesheet" href="footer.css">
+</head>
+<body>
+
+    <div id="preloader">
+        <div class="loader-content-container">
+            <div id="loader-text">MENTORHUB</div>
+            <div id="loader-logo-image">
+                <img src="logo.png" alt="MentorHub Branding Logo">
+            </div>
+        </div>
+    </div>
+
+    <header id="header">
+        <a href="index.html" id="logo">
+            <img src="logo.png" alt="MentorHub Logo">
+            <div class="logo-name">
+                <h3>MENTORHUB</h3>
+                <h5>GUIDANCE POOL</h5>
+            </div>
+        </a>
+
+        <div class="menu-container">
+            <nav id="menu">
+                <a href="index.html"><button class="btn active">Home</button></a>
+                <a href="about.html"><button class="btn">About</button></a>
+                <a href="services.html"><button class="btn">Services</button></a>
+                <a href="student_form.html"><button class="btn">Student</button></a>
+                <a href="tutor_form.html"><button class="btn">Tutor</button></a>
+                <a href="get_franchise.html"><button class="btn">Get franchise</button></a>
+                <a href="contact.html"><button class="btn">Contact</button></a>
+                <div class="profile-wrapper">
+                    <a href="login.html" class="nav-login-btn">Login</a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="menu-open-close" id="mobileMenuBtn" aria-label="Toggle Navigation">
+            <img class="mobile-icon-asset menu-icon" src="menu.svg" alt="Open Menu" />
+            <img class="mobile-icon-asset close-icon" src="close.svg" alt="Close Menu" />
+        </div>
+
+        <div id="mobileMenuDrawer" class="mobile-drawer-wrapper">
+            <a href="login.html" class="nav-login-btn">Login</a>
+            <div class="menu-divider"></div>
+            <a href="index.html" class="mobile-link active">Home</a>
+            <a href="about.html" class="mobile-link">About</a>
+            <a href="services.html" class="mobile-link">Services</a>
+            <a href="student_form.html" class="mobile-link">Student</a>
+            <a href="tutor_form.html" class="mobile-link">Tutor</a>
+            <a href="get_franchise.html" class="mobile-link">Get franchise</a>
+            <a href="contact.html" class="mobile-link">Contact</a>
+        </div>
+    </header>
+
+    <main id="main">
+        <section class="page1">
+            <div class="hero">
+                <div class="hero__content">
+                    <div class="hero__badge">Empowering Journeys</div>
+                    <h1 class="hero__title">Find your perfect Mentor.</h1>
+                    <p class="hero__subtitle">
+                        "Every Child is unique, therefore there education should also be."<br>
+                        <i>-Jeannie Fulbright</i>
+                    </p>
+                    <div class="hero__actions">
+                        <a href="student_form.html" class="cta-btn primary">Book a Mentor</a>
+                        <a href="contact.html" class="cta-btn primary">Get in Touch</a>
+                        <a href="Y:\praxes - Copy\index.html" class="cta-btn primary">Explore Praxes</a>
+                    </div>
+                </div>
+                <div class="hero__visual">
+                    <div class="hanging-bulb-fixture">
+                        <span class="fixture-wire"></span>
+                        <div class="bulb-element">
+                            <img src="logo.png" alt="Praxes Core Bulb Identity" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats-bar">
+            <div class="stat-item">
+                <span class="stat-number">Class I - X</span>
+                <span class="stat-label">Full Coverage</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">All</span>
+                <span class="stat-label">Subjects</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">500+</span>
+                <span class="stat-label">Happy Students</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">Experts</span>
+                <span class="stat-label">Experienced Faculty</span>
+            </div>
+        </section>
+
+        <section class="workflow-section">
+            <header class="section-header">
+                <div class="section-label">Our Process</div>
+                <h2 class="section-title">How <span>MentorHub</span> Works</h2>
+                <p class="section-subtitle">Your simple, transparent 6-step journey to connecting with the perfect home tutor.</p>
+                <div class="section-underline"></div>
+            </header>
+            <div class="workflow-timeline-wrapper">
+                <div class="timeline-progress-line"></div>
+                <div class="workflow-step-card">
+                    <div class="step-badge">01</div>
+                    <div class="step-image-frame">
+                        <img src="step1.png" alt="Form Filling">
+                    </div>
+                    <div class="step-text-block">
+                        <h3 class="step-title">Form Filling</h3>
+                        <p class="step-desc">Share your learning requirements, class level, and target goals with us in under a minute.</p>
+                    </div>
+                </div>
+                <div class="workflow-step-card" id="step-counselling">
+                    <div class="step-badge">02</div>
+                    <div class="step-image-frame">
+                        <img src="step2.png" alt="Expert Counselling">
+                    </div>
+                    <div class="step-text-block">
+                        <h3 class="step-title">Expert Counselling</h3>
+                        <p class="step-desc">Our advisors connect with you to map out your academic struggles and curriculum speed.</p>
+                    </div>
+                </div>
+                <div class="workflow-step-card">
+                    <div class="step-badge">03</div>
+                    <div class="step-image-frame">
+                        <img src="step3.png" alt="Tutor Matching">
+                    </div>
+                    <div class="step-text-block">
+                        <h3 class="step-title">Tutor Matching</h3>
+                        <p class="step-desc">We cross-match your data with our hand-picked pool to assign the absolute best tutor.</p>
+                    </div>
+                </div>
+                <div class="workflow-step-card" id="step-demo">
+                    <div class="step-badge">04</div>
+                    <div class="step-image-frame">
+                        <img src="step4.png" alt="Free Demo Class">
+                    </div>
+                    <div class="step-text-block">
+                        <h3 class="step-title">Free Demo Class</h3>
+                        <p class="step-desc">Attend a full complimentary home trial session to evaluate compatibility firsthand.</p>
+                        <div class="satisfaction-loop-alert">
+                            <span class="loop-tag">Not Satisfied?</span>
+                            <p>Our advisors instantly arrange another match!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="workflow-step-card">
+                    <div class="step-badge">05</div>
+                    <div class="step-image-frame">
+                        <img src="step5.png" alt="Easy Payment">
+                    </div>
+                    <div class="step-text-block">
+                        <h3 class="step-title">Easy Payment</h3>
+                        <p class="step-desc">Process your session fees safely through transparent, direct digital checkout portals.</p>
+                    </div>
+                </div>
+                <div class="workflow-step-card">
+                    <div class="step-badge">06</div>
+                    <div class="step-image-frame">
+                        <img src="step6.png" alt="Tutoring Begins">
+                    </div>
+                    <div class="step-text-block">
+                        <h3 class="step-title">Tutoring Begins!</h3>
+                        <p class="step-desc">Regular personalized learning commences at home to fast-track your high scores.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="page2">
+            <header class="section-header">
+                <div class="section-label">Features</div>
+                <h2 class="section-title">What <span>The Praxes Mentor Hub</span> Offers</h2>
+                <p class="section-subtitle">Tailored workspace ecosystems optimized for direct knowledge translation and interactive upskilling tracking.</p>
+                <div class="section-underline"></div>
+            </header>
+            <div class="cards">
+                <div class="card">
+                    <div class="courses">
+                        <h4>Competitive</h4>
+                    </div>
+                    <h3 class="chapter">JEE / NEET / CUET</h3>
+                    <p class="sub-topic">Lay a bulletproof foundation for JEE, NEET, and CUET early on with expert conceptual clarity, smart shortcuts, and simulated test series designed to maximize ranks.</p>
+                    <a href="sevivce.html" class="join-btn">Connect to Us</a>
+                </div>
+                <div class="card">
+                    <div class="courses">
+                        <h4>Academic</h4>
+                    </div>
+                    <h3 class="chapter">Nursery to Class 12<sup>th</sup></h3>
+                    <p class="sub-topic">Clear your doubts, master tough concepts, and unlock top school scores with personalized 1-on-1 expert mentoring!</p>
+                    <a href="service.html" class="join-btn">Connect to Us</a>
+                </div>
+                <div class="card">
+                    <div class="courses">
+                        <h4>Value Added Skills</h4>
+                    </div>
+                    <h3 class="chapter">Handwriting &amp; Spoken English</h3>
+                    <p class="sub-topic">Master fluent spoken English and creative writing with our fun, interactive modules that build confident global communicators from day one!</p>
+                    <a href="service.html" class="join-btn">Connect to Us</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials-section">
+            <div class="section-header">
+                <span class="section-label">Reviews</span>
+                <h2 class="section-title">What Our <span>Students Say</span></h2>
+                <div class="section-underline"></div>
+                <p class="section-subtitle" style="margin-top: 1rem">
+                    Real stories from students who transformed their learning with Praxes.
+                </p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="testimonial-text">
+                        Praxes has completely changed the way I study. The daily practice sessions keep me consistent and the instant answers help me understand where I go wrong immediately. My Math scores have improved so much!
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">A</div>
+                        <div>
+                            <p class="author-name">Aarav Sharma</p>
+                            <span class="author-class">Class VIII &middot; Raipur</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="testimonial-text">
+                        I used to struggle with Science, but after using Praxes for two months, I scored 92 in my unit test! The topic-wise tests really helped me focus on my weak chapters. Highly recommended for every student.
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">P</div>
+                        <div>
+                            <p class="author-name">Priya Verma</p>
+                            <span class="author-class">Class X &middot; Raipur</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="testimonial-text">
+                        The progress tracking feature is brilliant. As a parent, I can now clearly see which subjects my son needs to work on. Praxes gives complete transparency and that gives me real peace of mind.
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">R</div>
+                        <div>
+                            <p class="author-name">Rekha Gupta</p>
+                            <span class="author-class">Parent &middot; Class VII</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="testimonial-text">
+                        The mentorship sessions on Praxes are what truly set it apart. When I was confused about algebraic expressions, my mentor explained it so clearly within the same day. I felt very supported throughout.
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">K</div>
+                        <div>
+                            <p class="author-name">Kartik Mishra</p>
+                            <span class="author-class">Class IX &middot; Raipur</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="testimonial-text">
+                        Our institute integrated Praxes and the results speak for themselves. Students are more engaged, teachers can track performance easily, and our overall pass rate has improved. A complete academic solution!
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">S</div>
+                        <div>
+                            <p class="author-name">Sunita Patel</p>
+                            <span class="author-class">Coaching Director &middot; Raipur</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="testimonial-text">
+                        Praxes makes studying fun! Unlimited tests mean I can practice as many times as I want without running out of questions. My confidence before exams has gone up a lot — I actually look forward to tests now.
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">N</div>
+                        <div>
+                            <p class="author-name">Naina Sahu</p>
+                            <span class="author-class">Class VI &middot; Raipur</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="contact-us">
+            <h3>Contact Us</h3>
+            <div class="contacts">
+                <div class="contact-details">
+                    <img src="phone.svg" alt="" />
+                    <div class="contact">
+                        <h4 class="contact-title">Phone</h4>
+                        <h5>+91 62602 03132</h5>
+                    </div>
+                </div>
+                <div class="contact-details">
+                    <img src="mail.svg" alt="" />
+                    <div class="contact">
+                        <h4 class="contact-title">Email</h4>
+                        <h5>praxes24@gmail.com</h5>
+                    </div>
+                </div>
+                <div class="contact-details">
+                    <img src="map.svg" alt="" />
+                    <div class="contact">
+                        <h4 class="contact-title">Address</h4>
+                        <h5>1st floor, Srishti's Palazzo commercial complex, St. Xavier School Road, Raipur, Chhattisgarh</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="social-platforms">
+            <h3>Our Platforms</h3>
+            <div class="platform">
+                <img src="Facebook.svg" alt="" />
+                <h4>Facebook</h4>
+            </div>
+            <div class="platform">
+                <img src="instagram.svg" alt="" />
+                <h4>Instagram</h4>
+            </div>
+            <div class="platform">
+                <img src="LinkedIn.svg" alt="" />
+                <h4>LinkedIn</h4>
+            </div>
+        </div>
+        <div class="what-offer">
+            <h3>Important Links</h3>
+            <div class="offers">
+                <a href="disclaimer"><h4>Disclaimer</h4></a>
+                <a href="privacy"><h4>Privacy</h4></a>
+                <a href="refund_policy"><h4>Refund Policy</h4></a>
+                <a href="terms_and_condition"><h4>Terms and Conditions</h4></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

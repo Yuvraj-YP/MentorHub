@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Portal — MentorHub</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="footer.css">
+</head>
+<body>
+
+
+    <header id="header">
+        <a href="index.html" id="logo">
+            <img src="logo.png" alt="MentorHub Logo">
+            <div class="logo-name">
+                <h3>MENTORHUB</h3>
+                <h5>GUIDANCE POOL</h5>
+            </div>
+        </a>
+        <div class="menu-container">
+            <nav id="menu">
+                <a href="index.html"><button class="btn">Home</button></a>
+                <a href="about.html"><button class="btn">About</button></a>
+                <a href="services.html"><button class="btn">Services</button></a>
+                <a href="student_form.html"><button class="btn">Student</button></a>
+                <a href="tutor_form.html"><button class="btn">Tutor</button></a>
+                <a href="get_franchise.html"><button class="btn">Get franchise</button></a>
+                <a href="contact.html"><button class="btn">Contact</button></a>
+                <div class="profile-wrapper">
+                    <a href="login.html" class="btn active">Login</a>
+                </div>
+            </nav>
+        </div>
+        <div class="menu-open-close" id="mobileMenuBtn" aria-label="Toggle Navigation">
+            <img class="mobile-icon-asset menu-icon" src="menu.svg" alt="Open Menu" />
+            <img class="mobile-icon-asset close-icon" src="close.svg" alt="Close Menu" />
+        </div>
+        <div id="mobileMenuDrawer" class="mobile-drawer-wrapper">
+            <a href="login.html" class="nav-login-btn"> Login</a>
+            <div class="menu-divider"></div>
+            <a href="index.html" class="mobile-link">Home</a>
+            <a href="about.html" class="mobile-link">About</a>
+            <a href="services.html" class="mobile-link">Services</a>
+            <a href="student_form.html" class="mobile-link">Student</a>
+            <a href="tutor_form.html" class="mobile-link">Tutor</a>
+            <a href="get_franchise.html" class="mobile-link">Get franchise</a>
+            <a href="contact.html" class="mobile-link">Contact</a>
+        </div>
+    </header>
+
+
+    <main id="main">
+        <section class="login-page-section" style="padding-top: 4rem;">
+            <div class="login-column-container">
+                
+                <div class="login-premium-card">
+                    
+                    <div class="login-toggle-container">
+                        <div class="login-toggle-btn active" id="tab-student" onclick="switchLoginMode('student')">STUDENT LOGIN</div>
+                        <div class="login-toggle-btn" id="tab-tutor" onclick="switchLoginMode('tutor')">TUTOR LOGIN</div>
+                    </div>
+
+                    <form class="premium-contact-form" action="https://mentorhub.praxes.in/administrator/tutor/dashboard" method="POST">
+                        
+                        <input type="hidden" id="login-role-marker" name="role" value="student">
+
+                        <div class="form-group">
+                            <label for="login-identity" id="label-identity">Registered Email / Mobile</label>
+                            <input type="text" id="login-identity" name="identity" placeholder="Enter your credentials" required />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="login-auth">Password</label>
+                            <input type="password" id="login-auth" name="password" placeholder="••••••••" required />
+                        </div>
+
+                        <div class="login-options-footer">
+                            <a href="forgot-password.html" class="forget-password-link">Forget Password ?</a>
+                        </div>
+
+                        <button type="submit" id="submit-login-btn" class="form-submit-btn">
+                            Sign In as Student
+                        </button>
+                    </form>
+
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="contact-us">
+            <h3>About Us</h3>
+            <div class="contacts">
+                <p class="footer-about-text" style="font-size: 0.88rem; color: #4a4a6a; line-height: 1.6; margin-bottom: 1rem; font-weight: 500;">
+                    The Trajectory Academy is a home tutoring service provider company providing premium tracking channels across your region.
+                </p>
+            </div>
+        </div>
+        <div class="social-platforms">
+            <h3>Our Platforms</h3>
+            <div class="platform"><img src="Facebook.svg" alt="" /><h4>Facebook</h4></div>
+        </div>
+        <div class="what-offer">
+            <h3>Important Links</h3>
+            <div class="offers">
+                <a href="privacy" style="text-decoration: none;"><h4>Privacy Policy</h4></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function switchLoginMode(role) {
+            const studentTab = document.getElementById('tab-student');
+            const tutorTab = document.getElementById('tab-tutor');
+            const roleMarker = document.getElementById('login-role-marker');
+            const submitBtn = document.getElementById('submit-login-btn');
+
+            if (role === 'student') {
+                studentTab.classList.add('active');
+                tutorTab.classList.remove('active');
+                roleMarker.value = 'student';
+                submitBtn.innerText = 'Sign In as Student';
+            } else {
+                tutorTab.classList.add('active');
+                studentTab.classList.remove('active');
+                roleMarker.value = 'tutor';
+                submitBtn.innerText = 'Sign In as Tutor';
+            }
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

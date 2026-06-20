@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;450;500;550;600;650;700;750;800&display=swap');
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #121222;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    z-index: 99999;
+    opacity: 1;
+    transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.6s;
+}
+
+.loader-content-container {
+    display: flex;
+    flex-direction: column-reverse; 
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Base Text Configurations */
+#loader-text {
+    font-family: "Nunito", sans-serif;
+    font-weight: 650;
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    color: #ffffff;
+    letter-spacing: 8px;
+    opacity: 0;
+    transform: translateY(0);
+    transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.6s ease, text-shadow 1.5s ease;
+}
+
+/* Elegant Text Glow triggers smoothly when visible */
+#loader-text.visible {
+    opacity: 1;
+    /* Clean, layered text shadow using the soft Praxes green tone to look sophisticated */
+    text-shadow: 0 0 12px rgba(125, 173, 157, 0.3), 
+                 0 0 30px rgba(125, 173, 157, 0.15);
+}
+
+#loader-text.move-down {
+    transform: translateY(50px);
+}
+
+#loader-logo-image {
+    opacity: 0;
+    transform: scale(0.8); 
+    transition: opacity 1.2s cubic-bezier(0.25, 1, 0.5, 1), transform 1.4s cubic-bezier(0.16, 1, 0.3, 1), filter 1.5s ease;
+    height: 160px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#loader-logo-image img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Elegant Image Vector Glow Trigger */
+#loader-logo-image.reveal {
+    opacity: 1;
+    transform: scale(2); 
+    /* drop-shadow behaves perfectly around the edges of a transparent PNG/SVG logo */
+    filter: drop-shadow(0 0 20px rgba(125, 173, 157, 0.4))
+            drop-shadow(0 0 50px rgba(125, 173, 157, 0.15));
+}
+
+#preloader.fade-out {
+    opacity: 0;
+    visibility: hidden;
+}

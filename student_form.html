@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration — MentorHub</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="studentTeacher_reg.css">
+    <link rel="stylesheet" href="footer.css">
+</head>
+<body>
+
+    <header id="header">
+        <a href="index.html" id="logo">
+            <img src="logo.png" alt="MentorHub Logo">
+            <div class="logo-name">
+                <h3>MENTORHUB</h3>
+                <h5>GUIDANCE POOL</h5>
+            </div>
+        </a>
+        <div class="menu-container">
+            <nav id="menu">
+                <a href="index.html"><button class="btn">Home</button></a>
+                <a href="about.html"><button class="btn">About</button></a>
+                <a href="services.html"><button class="btn">Services</button></a>
+                <a href="student_form.html"><button class="btn active">Student</button></a>
+                <a href="tutor_form.html"><button class="btn">Tutor</button></a>
+                <a href="get_franchise.html"><button class="btn">Get franchise</button></a>
+                <a href="contact.html"><button class="btn">Contact</button></a>
+                <div class="profile-wrapper">
+                    <a href="login.html" class="nav-login-btn">Login</a>
+                </div>
+            </nav>
+        </div>
+        <div class="menu-open-close" id="mobileMenuBtn" aria-label="Toggle Navigation">
+            <img class="mobile-icon-asset menu-icon" src="menu.svg" alt="Open Menu" />
+            <img class="mobile-icon-asset close-icon" src="close.svg" alt="Close Menu" />
+        </div>
+        <div id="mobileMenuDrawer" class="mobile-drawer-wrapper">
+            <a href="login.html" class="nav-login-btn">Login</a>
+            <div class="menu-divider"></div>
+            <a href="index.html" class="mobile-link">Home</a>
+            <a href="about.html" class="mobile-link">About</a>
+            <a href="services.html" class="mobile-link">Services</a>
+            <a href="student_form.html" class="mobile-link active">Student</a>
+            <a href="tutor_form.html" class="mobile-link">Tutor</a>
+            <a href="get_franchise.html" class="mobile-link">Get franchise</a>
+            <a href="contact.html" class="mobile-link">Contact</a>
+        </div>
+    </header>
+
+    <main id="main">
+        <section class="contact-section">
+            <div class="form-page-container">
+                
+                <header class="section-header" style="margin-bottom: 3.5rem;">
+                    <div class="section-label">Enrollment Pipeline</div>
+                    <h1 class="section-title">Student <span>Registration Form</span></h1>
+                    <p class="section-subtitle">Provide your educational milestones and preferences to map the perfect home mentor tracking loop.</p>
+                </header>
+
+                <div class="contact-form-wrapper student-form-card">
+                    <form class="premium-contact-form registration-grid-form" action="#" method="POST">
+                        
+                        <div class="form-form-section">
+                            <h3 class="form-section-heading"><span>01</span> Personal Details</h3>
+                            <div class="form-row-split">
+                                <div class="form-group">
+                                    <label>Select Gender</label>
+                                    <div class="pill-selection-wrapper">
+                                        <label class="pill-tile"><input type="radio" name="student_gender" value="Male" required><span>Male</span></label>
+                                        <label class="pill-tile"><input type="radio" name="student_gender" value="Female"><span>Female</span></label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Study Area</label>
+                                    <div class="pill-selection-wrapper">
+                                        <label class="pill-tile"><input type="radio" name="study_area" value="Academic" required><span>Academic</span></label>
+                                        <label class="pill-tile"><input type="radio" name="study_area" value="Competitive"><span>Competitive</span></label>
+                                        <label class="pill-tile"><input type="radio" name="study_area" value="Value Added Skills"><span>Value Added Skills</span></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-form-section">
+                            <h3 class="form-section-heading"><span>02</span> Classes / Field & Courses</h3>
+                            
+                            <div class="form-group">
+                                <label>Classes / Field Options</label>
+                                <div class="pill-selection-wrapper multi-scroll-box">
+                                    <label class="pill-tile checkbox-tile"><input type="checkbox" name="class_field" value="Nursery"><span>Nursery</span></label>
+                                    <label class="pill-tile checkbox-tile"><input type="checkbox" name="class_field" value="KGI"><span>KGI</span></label>
+                                    <label class="pill-tile checkbox-tile"><input type="checkbox" name="class_field" value="KGII"><span>KGII</span></label>
+                                    <label class="pill-tile checkbox-tile"><input type="checkbox" name="class_field" value="Class 1"><span>Class 1</span></label>
+                                    <label class="pill-tile checkbox-tile"><input type="checkbox" name="class_field" value="Class 2"><span>Class 2</span></label>
+                                    <label class="pill-tile checkbox-tile"><input type="checkbox" name="class_field" value="Class 3"><span>Class 3</span></label>
+                                    <label class="pill-tile checkbox-tile"><input type="checkbox" name="class_field" value="Class 4"><span>Class 4</span></label>
+                                    <label class="pill-tile checkbox-tile"><input type="checkbox" name="class_field" value="Class 5"><span>Class 5</span></label>
+                                    <label class="pill-tile checkbox-tile"><input type="checkbox" name="class_field" value="Class 6"><span>Class 6</span></label>
+                                    <label class="pill-tile checkbox-tile"><input type="checkbox" name="class_field" value="Class 7"><span>Class 7</span></label>
+                                    <label class="pill-tile checkbox-tile"><input type="checkbox" name="class_field" value="Class 8"><span>Class 8</span></label>
+                                    <label class="pill-tile checkbox-tile"><input type="checkbox" name="class_field" value="Class 9"><span>Class 9</span></label>
+                                    <label class="pill-tile checkbox-tile"><input type="checkbox" name="class_field" value="Class 10"><span>Class 10</span></label>
+                                    <label class="pill-tile checkbox-tile"><input type="checkbox" name="class_field" value="Class 11"><span>Class 11</span></label>
+                                    <label class="pill-tile checkbox-tile"><input type="checkbox" name="class_field" value="Class 12"><span>Class 12</span></label>
+                                    <label class="pill-tile checkbox-tile"><input type="checkbox" name="class_field" value="Computer Languages"><span>Computer Languages</span></label>
+                                    <label class="pill-tile checkbox-tile"><input type="checkbox" name="class_field" value="General"><span>General</span></label>
+                                </div>
+                            </div>
+
+                            <div class="form-group" style="margin-top: 1.5rem;">
+                                <label>Subjects / Course Path</label>
+                                <div class="pill-selection-wrapper multi-scroll-box">
+                                    <label class="pill-tile checkbox-tile"><input type="checkbox" name="subjects" value="Maths"><span>Maths</span></label>
+                                    <label class="pill-tile checkbox-tile"><input type="checkbox" name="subjects" value="English"><span>English</span></label>
+                                    <label class="pill-tile checkbox-tile"><input type="checkbox" name="subjects" value="SST"><span>SST</span></label>
+                                    <label class="pill-tile checkbox-tile"><input type="checkbox" name="subjects" value="Hindi"><span>Hindi</span></label>
+                                    <label class="pill-tile checkbox-tile"><input type="checkbox" name="subjects" value="Sanskrit"><span>Sanskrit</span></label>
+                                    <label class="pill-tile checkbox-tile"><input type="checkbox" name="subjects" value="Science"><span>Science</span></label>
+                                    <label class="pill-tile checkbox-tile"><input type="checkbox" name="subjects" value="Biology"><span>Biology</span></label>
+                                    <label class="pill-tile checkbox-tile"><input type="checkbox" name="subjects" value="Physics"><span>Physics</span></label>
+                                    <label class="pill-tile checkbox-tile"><input type="checkbox" name="subjects" value="Chemistry"><span>Chemistry</span></label>
+                                    <label class="pill-tile checkbox-tile"><input type="checkbox" name="subjects" value="Accounts"><span>Accounts</span></label>
+                                    <label class="pill-tile checkbox-tile"><input type="checkbox" name="subjects" value="Economics"><span>Economics</span></label>
+                                    <label class="pill-tile checkbox-tile"><input type="checkbox" name="subjects" value="Business studies"><span>Business Studies</span></label>
+                                    <label class="pill-tile checkbox-tile"><input type="checkbox" name="subjects" value="Java"><span>Java</span></label>
+                                    <label class="pill-tile checkbox-tile"><input type="checkbox" name="subjects" value="C and C++"><span>C and C++</span></label>
+                                    <label class="pill-tile checkbox-tile"><input type="checkbox" name="subjects" value="HTML"><span>HTML</span></label>
+                                    <label class="pill-tile checkbox-tile"><input type="checkbox" name="subjects" value="dot net"><span>.NET</span></label>
+                                    <label class="pill-tile checkbox-tile"><input type="checkbox" name="subjects" value="Drawing"><span>Drawing</span></label>
+                                    <label class="pill-tile checkbox-tile"><input type="checkbox" name="subjects" value="Sketching"><span>Sketching</span></label>
+                                    <label class="pill-tile checkbox-tile"><input type="checkbox" name="subjects" value="Handwriting classes"><span>Handwriting Classes</span></label>
+                                    <label class="pill-tile checkbox-tile"><input type="checkbox" name="subjects" value="Mural Art"><span>Mural Art</span></label>
+                                    <label class="pill-tile checkbox-tile"><input type="checkbox" name="subjects" value="Canvas Paintings"><span>Canvas Paintings</span></label>
+                                    <label class="pill-tile checkbox-tile"><input type="checkbox" name="subjects" value="Portrait"><span>Portrait</span></label>
+                                    <label class="pill-tile checkbox-tile"><input type="checkbox" name="subjects" value="Yoga"><span>Yoga</span></label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-form-section">
+                            <h3 class="form-section-heading"><span>03</span> Environment & Operational Modes</h3>
+                            <div class="form-row-split configuration-three-row">
+                                <div class="form-group">
+                                    <label>Preferred Tutor Gender</label>
+                                    <div class="pill-selection-wrapper">
+                                        <label class="pill-tile"><input type="radio" name="preferred_gender" value="Male" required><span>Male</span></label>
+                                        <label class="pill-tile"><input type="radio" name="preferred_gender" value="Female"><span>Female</span></label>
+                                        <label class="pill-tile"><input type="radio" name="preferred_gender" value="Any"><span>Any</span></label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Study Mode (Ratio)</label>
+                                    <div class="pill-selection-wrapper">
+                                        <label class="pill-tile"><input type="radio" name="study_mode_ratio" value="1:1" required><span>1:1 (Private)</span></label>
+                                        <label class="pill-tile"><input type="radio" name="study_mode_ratio" value="1:2"><span>1:2</span></label>
+                                        <label class="pill-tile"><input type="radio" name="study_mode_ratio" value="1:3"><span>1:3</span></label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Class Mode Engine</label>
+                                    <div class="pill-selection-wrapper">
+                                        <label class="pill-tile"><input type="radio" name="class_mode" value="Offline Tutoring" required><span>Offline</span></label>
+                                        <label class="pill-tile"><input type="radio" name="class_mode" value="Online Tutoring"><span>Online</span></label>
+                                        <label class="pill-tile"><input type="radio" name="class_mode" value="Any"><span>Any</span></label>
+                                        <label class="pill-tile"><input type="radio" name="class_mode" value="Customised worksheets"><span>Worksheets</span></label>
+                                        <label class="pill-tile"><input type="radio" name="class_mode" value="Customised Test Series"><span>Test Series</span></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-form-section">
+                            <h3 class="form-section-heading"><span>04</span> Location & Time Slots</h3>
+                            <div class="form-row-split location-three-split" style="margin-bottom: 1.5rem;">
+                                <div class="form-group">
+                                    <label for="form-state">State</label>
+                                    <select id="form-state" name="state" required>
+                                        <option value="" disabled selected hidden>Select State</option>
+                                        <option value="Chhattisgarh">Chhattisgarh</option>
+                                        <option value="Maharashtra">Maharashtra</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="form-location">Location / City</label>
+                                    <select id="form-location" name="location" required>
+                                        <option value="" disabled selected hidden>Select City</option>
+                                        <option value="Raipur">Raipur</option>
+                                        <option value="Bilaspur">Bilaspur</option>
+                                        <option value="Nagpur">Nagpur</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="form-pincode">Pin Code</label>
+                                    <input type="text" id="form-pincode" name="pincode" placeholder="6-Digit Pin Code" pattern="[0-9]{6}" required />
+                                </div>
+                            </div>
+
+                            <div class="form-group" style="margin-bottom: 2rem;">
+                                <label for="form-address">Detailed Physical Address</label>
+                                <textarea id="form-address" name="address" rows="3" placeholder="Enter house number, building name, street, landmarks..." required></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Preferred Time Slot Selection</label>
+                                <div class="pill-selection-wrapper multi-scroll-box slots-box">
+                                    <label class="pill-tile checkbox-tile"><input type="checkbox" name="time_slots" value="3pm-4pm"><span>03:00 PM - 04:00 PM</span></label>
+                                    <label class="pill-tile checkbox-tile"><input type="checkbox" name="time_slots" value="4pm-5pm"><span>04:00 PM - 05:00 PM</span></label>
+                                    <label class="pill-tile checkbox-tile"><input type="checkbox" name="time_slots" value="5pm-6pm"><span>05:00 PM - 06:00 PM</span></label>
+                                    <label class="pill-tile checkbox-tile"><input type="checkbox" name="time_slots" value="6pm-7pm"><span>06:00 PM - 07:00 PM</span></label>
+                                    <label class="pill-tile checkbox-tile"><input type="checkbox" name="time_slots" value="7pm-8pm"><span>07:00 PM - 08:00 PM</span></label>
+                                    <label class="pill-tile checkbox-tile"><input type="checkbox" name="time_slots" value="8pm-9pm"><span>08:00 PM - 09:00 PM</span></label>
+                                    <label class="pill-tile checkbox-tile"><input type="checkbox" name="time_slots" value="7:30-8:30am"><span>7:30 AM - 8:30 AM</span></label>
+                                    <label class="pill-tile checkbox-tile"><input type="checkbox" name="time_slots" value="8:30-9:30am"><span>8:30 AM - 9:30 AM</span></label>
+                                    <label class="pill-tile checkbox-tile"><input type="checkbox" name="time_slots" value="9:30-10:30am"><span>9:30 AM - 10:30 AM</span></label>
+                                    <label class="pill-tile checkbox-tile"><input type="checkbox" name="time_slots" value="10:30-11:30am"><span>10:30 AM - 11:30 AM</span></label>
+                                    <label class="pill-tile checkbox-tile"><input type="checkbox" name="time_slots" value="11:30-12:30pm"><span>11:30 AM - 12:30 PM</span></label>
+                                    <label class="pill-tile checkbox-tile"><input type="checkbox" name="time_slots" value="3:30-4:30pm"><span>03:30 PM - 04:30 PM</span></label>
+                                    <label class="pill-tile checkbox-tile"><input type="checkbox" name="time_slots" value="4:30-5:30pm"><span>04:30 PM - 05:30 PM</span></label>
+                                    <label class="pill-tile checkbox-tile"><input type="checkbox" name="time_slots" value="5:30-6:30pm"><span>05:30 PM - 06:30 PM</span></label>
+                                    <label class="pill-tile checkbox-tile"><input type="checkbox" name="time_slots" value="6:30-7:30pm"><span>06:30 PM - 07:30 PM</span></label>
+                                    <label class="pill-tile checkbox-tile"><input type="checkbox" name="time_slots" value="7:30-8:30pm"><span>07:30 PM - 08:30 PM</span></label>
+                                    <label class="pill-tile checkbox-tile"><input type="checkbox" name="time_slots" value="8:30-9:30pm"><span>08:30 PM - 09:30 PM</span></label>
+                                    <label class="pill-tile checkbox-tile"><input type="checkbox" name="time_slots" value="4:20-5:20pm"><span>04:20 PM - 05:20 PM</span></label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="cta-btn primary form-submit-btn" style="margin-top: 1rem;">
+                            Complete Registration
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="contact-us">
+            <h3>Contact Us</h3>
+            <div class="contacts">
+                <div class="contact-details">
+                    <img src="phone.svg" alt="" />
+                    <div class="contact">
+                        <h4 class="contact-title">Phone</h4>
+                        <h5>+91 62602 03132</h5>
+                    </div>
+                </div>
+                <div class="contact-details">
+                    <img src="mail.svg" alt="" />
+                    <div class="contact">
+                        <h4 class="contact-title">Email</h4>
+                        <h5>praxes24@gmail.com</h5>
+                    </div>
+                </div>
+                <div class="contact-details">
+                    <img src="map.svg" alt="" />
+                    <div class="contact">
+                        <h4 class="contact-title">Address</h4>
+                        <h5>1st floor, Srishti's Palazzo commercial complex, St. Xavier School Road, Raipur, Chhattisgarh</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="social-platforms">
+            <h3>Our Platforms</h3>
+            <div class="platform">
+                <img src="Facebook.svg" alt="" />
+                <h4>Facebook</h4>
+            </div>
+            <div class="platform">
+                <img src="instagram.svg" alt="" />
+                <h4>Instagram</h4>
+            </div>
+            <div class="platform">
+                <img src="LinkedIn.svg" alt="" />
+                <h4>LinkedIn</h4>
+            </div>
+        </div>
+        <div class="what-offer">
+            <h3>Important Links</h3>
+            <div class="offers">
+                <a href="disclaimer"><h4>Disclaimer</h4></a>
+                <a href="privacy"><h4>Privacy</h4></a>
+                <a href="refund_policy"><h4>Refund Policy</h4></a>
+                <a href="terms_and_condition"><h4>Terms and Conditions</h4></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

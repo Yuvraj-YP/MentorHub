@@ -1,0 +1,268 @@
+/* =========================================================================
+   1. MAIN CORES & LAYOUT STRUCTURES
+   ========================================================================= */
+#header {
+    height: 70px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 10000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e8edf2;
+    box-shadow: 0 2px 16px rgba(26, 26, 46, 0.06);
+    padding: 0 2rem;
+    box-sizing: border-box;
+    transition: box-shadow 0.3s ease;
+}
+
+#header *, #header *::before, #header *::after {
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+}
+
+#header #logo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 0.75rem;
+}
+
+#header #logo img {
+    height: 42px;
+    width: auto;
+    object-fit: contain;
+}
+
+#header #logo .logo-name {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+#header #logo .logo-name h3 {
+    font-size: 1.15rem;
+    font-weight: 650;
+    color: var(--dark-neutral, #0f0f1a);
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+#header #logo .logo-name h5 {
+    font-size: 0.68rem;
+    font-weight: 500;
+    color: var(--brand-primary, #0f6e56);
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+/* =========================================================================
+   2. DESKTOP TEXT-CAPSULE MENU MODULE
+   ========================================================================= */
+#header .menu-container #menu {
+    height: fit-content;
+    width: fit-content;
+    background-color: var(--brand-light-bg, #f3faf7);
+    border: 1.5px solid var(--brand-border-tint, #d4ede5);
+    display: flex;
+    padding: 0.35rem 0.5rem;
+    border-radius: 14px;
+    gap: 4px;
+    align-items: center;
+}
+
+#header #menu a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+#header #menu .btn {
+    background: none;
+    border: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    color: var(--muted-text, #5c5c7a);
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    letter-spacing: -0.01em;
+    white-space: nowrap;
+}
+
+#header #menu .btn:hover {
+    background-color: var(--background, #a9e3d0);
+    color: var(--dark-neutral, #0f0f1a);
+}
+
+#header #menu .btn.active {
+    background-color: var(--brand-primary, #0f6e56);
+    color: #ffffff;
+}
+
+/* =========================================================================
+   3. ACCOUNT WRAPPER & DROPDOWN COMPONENT ENGINES
+   ========================================================================= */
+.profile-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+#header #menu .profile-wrapper {
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin-left: 0.5rem;
+}
+
+#header #menu .nav-login-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0.45rem 0.9rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--brand-primary, #0f6e56); 
+    background: transparent;
+    border: 1.5px solid var(--brand-primary, #0f6e56); 
+    border-radius: 10px; 
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#header #menu .nav-login-btn:hover {
+    background: var(--brand-primary, #0f6e56);
+    color: #ffffff;
+}
+
+/* =========================================================================
+   4. COMPACT MOBILE VIEW BREAKPOINT OPERATIONS
+   ========================================================================= */
+#header #mobileMenuBtn {
+    display: none;
+}
+
+#header .mobile-drawer-wrapper {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    #header {
+        padding: 0 1.5rem;
+    }
+
+    #header .menu-container #menu {
+        display: none;
+    }
+
+    #header #mobileMenuBtn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        height: 42px;
+        cursor: pointer;
+        z-index: 10002;
+        background-color: var(--brand-primary, #0f6e56); 
+        border-radius: 50%;
+        border: 1.5px solid var(--brand-border-tint, #d4ede5);
+        transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease;
+    }
+
+    #header #mobileMenuBtn .mobile-icon-asset {
+        width: 20px;
+        height: 20px;
+        object-fit: contain;
+        pointer-events: none;
+        filter: brightness(0) invert(1);
+        transition: transform 0.25s ease, opacity 0.2s ease;
+    }
+
+    #header #mobileMenuBtn .menu-icon { display: block; }
+    #header #mobileMenuBtn .close-icon { display: none; }
+
+    #header #mobileMenuBtn.is-open {
+        transform: rotate(90deg); 
+        background-color: var(--dark-neutral, #0f0f1a);
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    #header #mobileMenuBtn.is-open .menu-icon { display: none; }
+    #header #mobileMenuBtn.is-open .close-icon { display: block; }
+
+    #header .mobile-drawer-wrapper {
+        display: flex; 
+        flex-direction: column;
+        align-items: center;
+        gap: 1.2rem;
+        position: absolute;
+        top: 80px; 
+        right: 1.5rem;        
+        width: 290px;      
+        border-radius: 24px; 
+        padding: 2rem 1.5rem;
+        z-index: 10001;
+
+        background: var(--glass-background, rgba(169, 227, 208, 0.85));
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 0 20px 40px rgba(15, 15, 26, 0.08);
+        
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-15px);
+        transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+                    transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+                    visibility 0.3s;
+    }
+
+    #header .mobile-drawer-wrapper.is-open {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+    
+    #header .mobile-drawer-wrapper .mobile-link {
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: var(--dark-neutral, #0f0f1a);
+        text-decoration: none;
+        padding: 0.5rem 0;
+        text-align: center;
+        width: 100%;
+        transition: color 0.2s ease, transform 0.2s ease;
+    }
+
+    #header .mobile-drawer-wrapper .mobile-link.active,
+    #header .mobile-drawer-wrapper .mobile-link:hover {
+        color: var(--brand-primary, #0f6e56);
+        transform: scale(1.02);
+    }
+
+    #header .mobile-drawer-wrapper .nav-login-btn {
+        width: 100%;
+        text-align: center;
+        padding: 0.75rem;
+        background-color: var(--dark-neutral, #0f0f1a);
+        color: #ffffff;
+        text-decoration: none;
+        border-radius: 12px;
+        font-weight: 500;
+        box-shadow: 0 4px 12px rgba(15, 15, 26, 0.1);
+    }
+
+    #header .mobile-drawer-wrapper .menu-divider {
+        width: 100%;
+        height: 1px;
+        background-color: rgba(15, 15, 26, 0.08);
+        margin: 0.2rem 0;
+    }
+}

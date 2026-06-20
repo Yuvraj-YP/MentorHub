@@ -1,0 +1,119 @@
+.about-hero {
+    min-height: 40vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 2rem 3rem;
+    background: linear-gradient(to bottom, #c3f8e8 0%, #f6f9fb 35%, #f6f9fb 55%, #c3f8e8 100%);
+    text-align: center;
+    position: relative;
+}
+
+.about-hero__content {
+    max-width: 850px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-hero__content .hero__title span {
+    color: var(--brand-primary);
+}
+
+.about-narrative {
+    background-color: var(--page-color);
+    padding: 2rem 2rem 6rem;
+    width: 100%;
+    background: linear-gradient(to bottom, #c3f8e8 0%, #ffffff 100%);
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.narrative-main {
+    background: #ffffff;
+    border: 1px solid var(--brand-border-tint);
+    border-radius: 24px;
+    padding: 3.5rem 2.5rem;
+    margin-bottom: 4rem;
+    box-shadow: 0 4px 6px rgba(26, 26, 46, 0.01), 0 20px 40px rgba(26, 26, 46, 0.02);
+}
+
+.narrative-p {
+    font-size: 1.05rem;
+    color: var(--muted-text);
+    line-height: 1.85;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.narrative-p:last-child {
+    margin-bottom: 0;
+}
+
+.narrative-p strong {
+    color: var(--dark-neutral);
+    font-weight: 450;
+}
+
+.about-cards-grid {
+    margin-bottom: 5rem !important;
+}
+
+.values-ribbon {
+    background: var(--dark-neutral);
+    border-radius: 24px;
+    padding: 4rem 2rem;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(15, 15, 26, 0.25);
+}
+
+.values-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.value-pill {
+    background: rgba(169, 227, 208, 0.12);
+    border: 1.5px solid rgba(169, 227, 208, 0.25);
+    color: #a9e3d0;
+    font-weight: 450;
+    font-size: 0.95rem;
+    padding: 0.65rem 1.6rem;
+    border-radius: 50px;
+    letter-spacing: 0.3px;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.value-pill:hover {
+    background: var(--brand-primary);
+    color: #ffffff;
+    border-color: var(--brand-primary);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(125, 173, 157, 0.25);
+}
+
+@media (max-width: 768px) {
+    .narrative-main {
+        padding: 2.2rem 1.5rem;
+    }
+
+    .values-ribbon {
+        padding: 3rem 1.2rem;
+    }
+
+    .value-pill {
+        width: 100%;
+        text-align: center;
+    }
+}
