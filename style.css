@@ -337,14 +337,6 @@ html, body {
     font-weight: 500;
 }
 
-.section-underline {
-    width: 50px;
-    height: 3.5px;
-    background: var(--brand-primary);
-    border-radius: 50px;
-    margin: 1.2rem auto 0;
-}
-
 /* =========================================================================
    5. INTERACTIVE TIMELINE WORKFLOW SYSTEM
    ========================================================================= */
