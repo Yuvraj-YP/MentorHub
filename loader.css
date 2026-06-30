@@ -1,4 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;450;500;550;600;650;700;750;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap');
+
+#preloader, #preloader * {
+    font-family: 'Nunito', sans-serif;
+}
 
 #preloader {
     position: fixed;
@@ -6,76 +10,114 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #121222;
+    background: radial-gradient(circle at 50% 50%, #dbfbbf 0%, #83ebea 55%, #5ce4e2 100%);
     display: flex;
-    align-items: center; 
+    align-items: center;
     justify-content: center;
     z-index: 99999;
     opacity: 1;
     transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.6s;
-}
-
-.loader-content-container {
-    display: flex;
-    flex-direction: column-reverse; 
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    text-align: center;
-    width: 100%;
-    max-width: 600px;
-}
-
-/* Base Text Configurations */
-#loader-text {
-    font-family: "Nunito", sans-serif;
-    font-weight: 650;
-    font-size: clamp(2.2rem, 5vw, 3.5rem);
-    color: #ffffff;
-    letter-spacing: 8px;
-    opacity: 0;
-    transform: translateY(0);
-    transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.6s ease, text-shadow 1.5s ease;
-}
-
-/* Elegant Text Glow triggers smoothly when visible */
-#loader-text.visible {
-    opacity: 1;
-    /* Clean, layered text shadow using the soft Praxes green tone to look sophisticated */
-    text-shadow: 0 0 12px rgba(125, 173, 157, 0.3), 
-                 0 0 30px rgba(125, 173, 157, 0.15);
-}
-
-#loader-text.move-down {
-    transform: translateY(50px);
-}
-
-#loader-logo-image {
-    opacity: 0;
-    transform: scale(0.8); 
-    transition: opacity 1.2s cubic-bezier(0.25, 1, 0.5, 1), transform 1.4s cubic-bezier(0.16, 1, 0.3, 1), filter 1.5s ease;
-    height: 160px; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#loader-logo-image img {
-    height: 100%;
-    width: auto;
-    object-fit: contain;
-}
-
-/* Elegant Image Vector Glow Trigger */
-#loader-logo-image.reveal {
-    opacity: 1;
-    transform: scale(2); 
-    /* drop-shadow behaves perfectly around the edges of a transparent PNG/SVG logo */
-    filter: drop-shadow(0 0 20px rgba(125, 173, 157, 0.4))
-            drop-shadow(0 0 50px rgba(125, 173, 157, 0.15));
+    overflow: hidden;
 }
 
 #preloader.fade-out {
     opacity: 0;
     visibility: hidden;
+}
+
+.loader-content-container {
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.modern-fluid-aura {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75vmin;
+    height: 75vmin;
+    background: radial-gradient(circle at 35% 35%, #ffffff 0%, #dbfbbb 40%, #83ebea 100%);
+    box-shadow: 
+        0 0 60px rgba(255, 255, 255, 0.8), 
+        0 25px 50px rgba(47, 210, 228, 0.3);
+    animation: matchVideoBlob 4s ease-in-out infinite alternate, spinAura 25s linear infinite;
+    z-index: 1;
+}
+
+#loader-logo-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    width: 65vw;
+    height: 65vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    z-index: 2;
+    transition: opacity 1.2s cubic-bezier(0.25, 1, 0.5, 1), transform 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#loader-logo-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+#loader-logo-image.reveal {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+#loader-text {
+    position: absolute;
+    bottom: 8%;
+    font-weight: 550;
+    font-size: clamp(2.4rem, 5.5vw, 3.8rem);
+    color: #ffffff;
+    letter-spacing: 12px;
+    opacity: 0;
+    z-index: 3;
+    transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.6s ease, text-shadow 1s ease;
+}
+
+#loader-text.visible {
+    opacity: 1;
+    text-shadow: 
+        1px 1px 0px #404040,
+        2px 2px 0px #2d2d2d,
+        3px 3px 0px #1a1a1a,
+        4px 4px 15px rgba(0, 0, 0, 0.65);
+}
+
+#loader-text.move-down {
+    transform: translateY(30px);
+}
+
+@keyframes matchVideoBlob {
+    0% {
+        border-radius: 45% 55% 40% 60% / 40% 45% 55% 60%;
+    }
+    50% {
+        border-radius: 53% 47% 58% 42% / 55% 52% 48% 45%;
+    }
+    100% {
+        border-radius: 40% 60% 48% 52% / 43% 40% 60% 57%;
+    }
+}
+
+@keyframes spinAura {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
 }
