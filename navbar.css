@@ -172,7 +172,7 @@ button, .btn, input, select, textarea, option {
 
 @media (max-width: 1024px) {
     #header #logo .logo-name {
-        margin-left: -0.5rem;
+        margin-left: -0.2rem;
     }
 
     #header #logo img {
